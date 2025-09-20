@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17e205f3-89d7-46ad-a8d2-27347b2d9568" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Tarea2/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/G2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G2/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G2/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G2/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G2/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G2/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G2/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G2/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G2/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G2/src/main/java/Siistemas/_4/G2/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G2/src/main/java/Siistemas/_4/G2/Sis414G2Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G2/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G2/src/test/java/Siistemas/_4/G2/Sis414G2ApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../out/production/sis414v3/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../sis414v3.iml" afterDir="false" />
-    </list>
+    <list default="true" id="17e205f3-89d7-46ad-a8d2-27347b2d9568" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,6 +49,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Practica/sis414v3/LeonFlores/Tarea3/G2"
