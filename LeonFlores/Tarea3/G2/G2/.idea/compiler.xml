@@ -5,6 +5,5 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-parameters" />
-    <bytecodeTargetLevel target="1.6" />
   </component>
 </project>
