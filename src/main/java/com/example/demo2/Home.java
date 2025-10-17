@@ -12,9 +12,11 @@ public class Home {
         return "Bienvenido a SIS 414 G2 v2";
     }
 
+    /*
     @GetMapping("/{param}")
     String helloparam(@PathVariable String param)
     {
         return "Bienvenido a SIS 414 G2 v2 " + param;
     }
+    */
 }

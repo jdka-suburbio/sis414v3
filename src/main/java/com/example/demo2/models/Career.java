@@ -7,13 +7,13 @@ public class Career {
     String Name;
     String Description;
     String Institution;
-    List<Subject> Subjects;
+    //List<Subject> Subjects;
 
     public Career(String description, String institution, String name) {
         Description = description;
         Institution = institution;
         Name = name;
-        Subjects = new ArrayList<Subject>();
+        //Subjects = new ArrayList<Subject>();
     }
 
     public String getName() {
