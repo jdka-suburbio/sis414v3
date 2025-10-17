@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b663535d-b4a7-4ae1-ae5a-166eee6c1236" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/VillcaGary/tarea2/.idea/sis414v3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sis414v3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="d4f827c3-962a-4795-9afc-e6d5eecc49a3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sis414v3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/src/main/java/com/example/Practica5/Practica5Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/src/main/java/com/example/Practica5/controllers/PillowController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/src/main/java/com/example/Practica5/models/Pillow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/src/main/java/com/example/Practica5/services/PillowService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/src/main/resources/static/images/black-pillow.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/src/main/resources/static/images/blue-pillow.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/src/main/resources/static/images/gray-pillow.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/src/main/resources/static/images/green-pillow.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/src/main/resources/static/images/sky-blue-pillow.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/src/main/resources/static/images/white-pillow.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RicaldiAlvaro/Practica5/src/test/java/com/example/Practica5/Practica5ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sis414v3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,39 +37,37 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
+  "associatedIndex": 5
 }]]></component>
-  <component name="ProjectId" id="32vW74VwwNf5InbOGr0ClhQAd1M" />
+  <component name="ProjectId" id="34AugIPtYnS3tX1f28skgYXPelg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Tarea1VillacGary",
-    "kotlin-language-version-configured": "true"
+    "git-widget-placeholder": "Practica5-RicaldiAlvaro",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/alvar/OneDrive/Escritorio/HW-2025-2/EMERGENTES/tareas-ing/sis414v3/RicaldiAlvaro"
   }
 }]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
-      </set>
-    </attachedChunks>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alvar\OneDrive\Escritorio\HW-2025-2\EMERGENTES\tareas-ing\sis414v3\RicaldiAlvaro" />
+    </key>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b663535d-b4a7-4ae1-ae5a-166eee6c1236" name="Changes" comment="" />
-      <created>1758301356939</created>
+      <changelist id="d4f827c3-962a-4795-9afc-e6d5eecc49a3" name="Changes" comment="" />
+      <created>1760668807137</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1758301356939</updated>
+      <updated>1760668807137</updated>
     </task>
     <servers />
   </component>
