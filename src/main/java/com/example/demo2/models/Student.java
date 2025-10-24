@@ -1,14 +1,22 @@
 package com.example.demo2.models;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name= "student")
 public class Student {
-    int Ru;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long Ru;
     String Dni;
     String Name;
     String LastName;
     String Address;
+    @ManyToOne
+    @JoinColumn(name = "career_id")
     Career CareerObj;
 
-    public Student(int ru, String dni, String name, String lastName, String address, Career careerObj) {
+    public Student(Long ru, String dni, String name, String lastName, String address, Career careerObj) {
         Ru = ru;
         Dni = dni;
         Name = name;
@@ -16,12 +24,15 @@ public class Student {
         Address = address;
         CareerObj = careerObj;
     }
+    public Student(){
+    }
 
-    public int getRu() {
+    public Long getRu() {
+
         return Ru;
     }
 
-    public void setRu(int ru) {
+    public void setRu(Long ru) {
         Ru = ru;
     }
 

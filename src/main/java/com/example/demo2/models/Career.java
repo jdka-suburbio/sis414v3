@@ -1,42 +1,61 @@
 package com.example.demo2.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Career {
-    String Name;
-    String Description;
-    String Institution;
-    //List<Subject> Subjects;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    private String description;
+    private String institution;
 
-    public Career(String description, String institution, String name) {
-        Description = description;
-        Institution = institution;
-        Name = name;
-        //Subjects = new ArrayList<Subject>();
+    public Career() {
+    }
+
+    public Career(String name, Long id, String description, String institution) {
+        this.name = name;
+        this.id = id;
+        this.description = description;
+        this.institution = institution;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public String getInstitution() {
-        return Institution;
+        return institution;
     }
 
     public void setInstitution(String institution) {
-        Institution = institution;
+        this.institution = institution;
     }
 }

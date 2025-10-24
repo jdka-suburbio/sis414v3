@@ -1,11 +1,16 @@
 package com.example.demo2.controllers;
 
 import com.example.demo2.models.Student;
+import com.example.demo2.repository.StudentRepository;
+import com.example.demo2.repository.SubjectRepository;
 import com.example.demo2.services.StudentService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 import java.util.Map;
 
@@ -13,63 +18,72 @@ import java.util.Map;
 @RestController
 public class StudentController {
 
-    private final StudentService studentService;
+    @Autowired
+    private StudentService studentService;
 
-    public StudentController(StudentService studentService) {
-        this.studentService = studentService;
-    }
+    @Autowired
+    private StudentRepository studentRepository;
 
     @GetMapping
-    @ResponseStatus(HttpStatus.OK)
-    List<Student> getStudents(@RequestParam(required = false, defaultValue = "*") String nameCareer) {
-        if(nameCareer.equals("*"))
-            return this.studentService.students;
-        return this.studentService.students.stream().filter(s->s.getCareer().getName().equals(nameCareer)).toList();
+    ResponseEntity<List<Student>> getStudents(){
+        return ResponseEntity.ok(studentService.getStudents());
+    }
+    @GetMapping("/{nameCareer}")
+    public ResponseEntity<List<Student>> getStudentByCareerName(@RequestParam(required = false, defaultValue = "*") String nameCareer) {
+        List<Student> students;
+        if (nameCareer.equals("*")) {
+            students = studentService.getStudents();
+        } else {
+            students = studentService.getStudentsByCareerName(nameCareer);
+        }
+        if (students.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(students);
     }
 
+
     @GetMapping("/{ru}")
-    ResponseEntity<Student> getStudent(@PathVariable int ru) {
-        Student student = this.studentService.getStudent(ru);
+    ResponseEntity<Student> getStudentByRu(@PathVariable Long ru) {
+        Student student = studentService.getStudentByRu(ru);
         if(student == null)
-            return ResponseEntity.badRequest().body(null);
+            return ResponseEntity.notFound().build();
         return ResponseEntity.ok(student);
     }
 
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    Student postStudent(@RequestBody Student student){
-        this.studentService.students.add(student);
-        return student;
+    ResponseEntity<?>postStudent(@RequestBody Student student){
+        Student saved = studentService.createStudent(student);
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/{ru}")
+                .buildAndExpand(student.getRu())
+                .toUri();
+        return ResponseEntity.created(location).body(saved);
     }
 
     @DeleteMapping("/{ru}")
-    ResponseEntity<?> deleteStudent(@PathVariable int ru){
-        boolean result = this.studentService.students.removeIf(s-> s.getRu() == ru);
+    ResponseEntity<?> deleteStudent(@PathVariable Long ru){
+        boolean result = studentService.deleteStudent(ru);
         if(!result)
-            return ResponseEntity.badRequest().body(null);
+            return ResponseEntity.badRequest().build();
         return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/{ru}")
-    Student putStudent(@PathVariable int ru, @RequestBody Student student){
-
-        return null;
+    ResponseEntity<?> putStudent(@PathVariable Long ru, @RequestBody Student student){
+        boolean updateStudent = studentService.updateStudent(ru, student);
+        if(!updateStudent)
+            return ResponseEntity.notFound().build();
+        return ResponseEntity.noContent().build();
     }
 
     @PatchMapping("/{ru}")
-    ResponseEntity<Student> patchStudent(@PathVariable int ru, @RequestBody Map<String, Object> update){
-        Student student = this.studentService.getStudent(ru);
-        if(student == null)
-            return ResponseEntity.badRequest().body(null);
+    public ResponseEntity<?> patchStudent(@PathVariable Long ru, @RequestBody Student student) {
+        return studentService.partiallyUpdateStudent(ru, student)
+                .map(updated -> ResponseEntity.noContent().build())
+                .orElseGet(() -> ResponseEntity.notFound().build());
 
-        update.forEach((key,value) -> {
-            switch (key)
-            {
-                case "name":
-                    student.setName((String) value);
-                break;
-            }
-        });
-        return ResponseEntity.ok(student);
     }
+
 }
