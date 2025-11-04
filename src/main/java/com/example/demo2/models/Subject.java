@@ -6,12 +6,16 @@ import jakarta.persistence.*;
 @Table(name = "subject")
 public class Subject {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     Long Id;
     String Code;
     String Name;
     @Column(name = "theoryhours")
     int TheoryHours;
+
+    @ManyToOne
+    @JoinColumn(name = "careerid")
+    Career career;
 
     public Subject() {
     }
