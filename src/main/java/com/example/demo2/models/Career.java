@@ -14,6 +14,7 @@ public class Career {
     String Name;
     String Description;
     String Institution;
+    //String UrlImage;
 
     @OneToMany(mappedBy = "career", cascade = CascadeType.ALL)
     List<Subject> Subjects;
@@ -67,4 +68,13 @@ public class Career {
     public void setSubjects(List<Subject> subjects) {
         this.Subjects = subjects;
     }
+    /*
+    public String getUrlImage() {
+        return UrlImage;
+    }
+
+    public void setUrlImage(String urlImage) {
+        UrlImage = urlImage;
+    }
+    */
 }

@@ -14,6 +14,7 @@ import java.util.List;
 
 @RequestMapping("/career")
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @Tag(name="Career", description="This endpoint permits create, read, update and delete operations")
 public class CareerController {
     @Autowired
