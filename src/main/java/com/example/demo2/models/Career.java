@@ -19,11 +19,15 @@ public class Career {
     @OneToMany(mappedBy = "career", cascade = CascadeType.ALL)
     List<Subject> Subjects;
 
+    @OneToMany(mappedBy = "career", cascade = CascadeType.ALL)
+    List<Student> Students;
+
     public Career(String description, String institution, String name) {
         Description = description;
         Institution = institution;
         Name = name;
         Subjects = new ArrayList<>();
+        Students = new ArrayList<>();
     }
 
     public Career(){
@@ -67,6 +71,14 @@ public class Career {
 
     public void setSubjects(List<Subject> subjects) {
         this.Subjects = subjects;
+    }
+
+    public List<Student> getStudents() {
+        return Students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.Students = students;
     }
     /*
     public String getUrlImage() {

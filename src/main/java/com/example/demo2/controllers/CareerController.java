@@ -2,10 +2,11 @@ package com.example.demo2.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import com.example.demo2.models.Career;
+import com.example.demo2.models.dto.CareerRequestDto;
 import com.example.demo2.repository.CareerRepository;
+import com.example.demo2.services.CareerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +20,9 @@ import java.util.List;
 public class CareerController {
     @Autowired
     private CareerRepository careerRepository;
+
+    @Autowired
+    private CareerService careerService;
 
     @GetMapping
     List<Career> getCareers(){
@@ -34,11 +38,19 @@ public class CareerController {
                     @ApiResponse(responseCode = "400", description = "Bad Request")
             }
     )
-    ResponseEntity<Career> postCareer(@RequestBody Career career){
-        var reponseCareer =  careerRepository.save(career);
-        if(reponseCareer == null)
-            return ResponseEntity.badRequest().body(null);
-        return ResponseEntity.created(null).body(reponseCareer);
+    ResponseEntity<String> postCareer(@RequestBody CareerRequestDto career){
+        try {
+            if (career == null || career.getName() == null || career.getName().trim().isEmpty()) {
+                return ResponseEntity.badRequest().body("Error: Datos inválidos");
+            }
+            var reponseCareer = careerService.createCareerWithRelations(career);
+            if(reponseCareer == null)
+                return ResponseEntity.badRequest().body("Error: No se pudo crear la carrera");
+            return ResponseEntity.status(201).body("Carrera agregada con id " + reponseCareer.getId());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.badRequest().body("Error: " + e.getMessage());
+        }
     }
 
     @DeleteMapping("/{id}")
