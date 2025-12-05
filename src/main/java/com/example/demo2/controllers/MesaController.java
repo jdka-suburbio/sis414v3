@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/mesa")
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://paolaquispe-2025.github.io")
 @Tag(name="Mesa", description="Endpoints para operaciones CRUD de mesas")
 public class MesaController {
 

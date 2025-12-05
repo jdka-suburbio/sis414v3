@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/appi/botella")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://paolaquispe-2025.github.io")
 public class BotellaController {
 
     @Autowired
