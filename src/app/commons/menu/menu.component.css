@@ -1,0 +1,26 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-image: url(https://thumbs.dreamstime.com/b/fondo-del-espacio-exterior-cielo-estrellado-nocturno-colorido-escena-espacial-con-planetas-estrellas-y-galaxias-panor%C3%A1mica-vista-266594097.jpg) ;
+  display: flex;
+  justify-content: right;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #1117;
+}
+
+ul li a.active {
+}
+ul li a .active:hover{
+  background-color: #1119;
+  color: #111;
+}

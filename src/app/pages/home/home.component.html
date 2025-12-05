@@ -1,0 +1,39 @@
+<app-menu></app-menu>
+
+<h2>Lista de Carreras</h2>
+
+<button class="botn" (click)="openCreate()">Agregar Nueva Carrera</button>
+
+<div *ngIf="!showForm">
+  @for (item of items; track item.id) {
+    <div class="card">
+        <img src="#" alt="Avatar" style="width:100%">
+      <h4><b>{{ item.name }}</b></h4>
+      <p>{{ item.description }}</p>
+
+      <button (click)="openEdit(item)">Editar</button>
+      <button (click)="remove(item.id)">Eliminar</button>
+    </div>
+  } @empty {
+    <h3>No hay carreras disponibles.</h3>
+  }
+</div>
+
+<div *ngIf="showForm" class="form-box">
+  <h3>{{ editing ? 'Editar Carrera' : 'Agregar Carrera' }}</h3>
+
+  <label>Nombre:</label>
+  <input [(ngModel)]="formData.name" type="text">
+
+  <label>Descripción:</label>
+  <input [(ngModel)]="formData.description" type="text">
+
+  <button (click)="save()">Guardar</button>
+  <button (click)="showForm = false">Cancelar</button>
+</div>
+
+
+
+
+
+
