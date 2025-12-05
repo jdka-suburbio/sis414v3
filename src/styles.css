@@ -1,0 +1,18 @@
+body {
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(#dde2e4,#4a26a0);
+  background-repeat: no-repeat;
+}
+footer{
+  background-color: #140116;
+  bottom: 0;
+  position: fixed;
+  width: 100%; 
+}
+h3{
+  color: #e0d5d5;
+  text-align: center;
+
+}
